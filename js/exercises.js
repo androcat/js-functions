@@ -98,6 +98,17 @@
   // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
   // ---------------------
 
+  // Reverses a String
+  // textToReverse is a String
+  // returns a String
+  function reverse(textToReverse) {
+    const textArray = [...textToReverse];
+    let reversedText = "";
+    for (let i = textArray.length - 1; i >= 0; i--) {
+      reversedText += textArray[i];
+    }
+    return reversedText;
+  }
   // ---------------------
   // Define a function findLongestWord() that takes an array of words and returns the length of the longest one.
   // ---------------------

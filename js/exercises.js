@@ -113,6 +113,20 @@
   // Define a function findLongestWord() that takes an array of words and returns the length of the longest one.
   // ---------------------
 
+  // Finds the length of the longest word from an array of words
+  // words is an array
+  // returns a Number
+  function findLongestWord(words) {
+    let max = 0;
+    for (let i = 0; i < words.length; i++) {
+      if (words[i].length > max) {
+        /*(i + 1 < words.length && words[i + 1] > words[i]) */ max =
+          words[i].length;
+      }
+    }
+    return max;
+  }
+
   // ---------------------
   // Define a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
   // ---------------------

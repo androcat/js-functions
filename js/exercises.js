@@ -34,6 +34,18 @@
   // Define a function isVowel() that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
   // ---------------------
 
+  // Determines if a character is a vowel
+  // letter is a String of length 1 to compare
+  // returns a boolean
+  function isVowel(letter) {
+    const vowels = ["a", "e", "i", "o", "u"];
+    for (let i = 0; i < vowels.length; i++) {
+      if (letter == vowels[i]) {
+        return true;
+      }
+    }
+    return false;
+  }
   // ---------------------
   // Write a function rovarspraket() that will translate a text into "rövarspråket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
   // ---------------------

@@ -50,9 +50,49 @@
   // Write a function rovarspraket() that will translate a text into "rövarspråket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
   // ---------------------
 
+  // Translates a text into "rövarspråket"/Doubles every consonant and place an occurrence of "o" in between
+  // textToTranslate is a String to translate
+  // returns a String
+  function rovarspraket(textToTranslate) {
+    const vowelsAndSpace = ["a", "e", "i", "o", "u", " "];
+    const textToTranslateArray = [...textToTranslate];
+    let translatedText = "";
+
+    for (let i = 0; i < textToTranslateArray.length; i++) {
+      if (!vowelsAndSpace.includes(textToTranslateArray[i])) {
+        translatedText +=
+          textToTranslateArray[i] + "o" + textToTranslateArray[i];
+      } else {
+        translatedText += textToTranslateArray[i];
+      }
+    }
+    return translatedText;
+  }
   // ---------------------
   // Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.
   // ---------------------
+
+  // Adds up all the numbers in an array
+  // nums is an array of Numbers
+  // returns a Number
+  function sum(nums) {
+    let total = 0;
+    for (let i = 0; i < nums.length; i++) {
+      total += nums[i];
+    }
+    return total;
+  }
+
+  // Multiplies all the numbers in an array
+  // nums is an array of Numbers
+  // returns a Number
+  function multiply(nums) {
+    let product = 1;
+    for (let i = 0; i < nums.length; i++) {
+      product *= nums[i];
+    }
+    return product;
+  }
 
   // ---------------------
   // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".

@@ -120,8 +120,7 @@
     let max = 0;
     for (let i = 0; i < words.length; i++) {
       if (words[i].length > max) {
-        /*(i + 1 < words.length && words[i + 1] > words[i]) */ max =
-          words[i].length;
+        max = words[i].length;
       }
     }
     return max;
@@ -130,6 +129,19 @@
   // ---------------------
   // Define a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
   // ---------------------
+
+  // Finds an array of words longer than a given value
+  // words is an array
+  // returns an array
+  function filterLongWords(words, n) {
+    let longWords = [];
+    for (let i = 0; i < words.length; i++) {
+      if (words[i].length > n) {
+        longWords.push(words[i]);
+      }
+    }
+    return longWords;
+  }
 
   // ---------------------
   // Define a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").

@@ -21,6 +21,15 @@
   // Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them.
   // ---------------------
 
+  // Calculates the larger of three numbers
+  // num1 is a Number to compare
+  // num2 is a Number to compare
+  // num3 is a Number to compare
+  // returns the largest number
+  function maxOfThree(num1, num2, num3) {
+    return Math.max(num1, num2, num3);
+  }
+
   // ---------------------
   // Define a function isVowel() that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
   // ---------------------

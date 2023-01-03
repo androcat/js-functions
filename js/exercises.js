@@ -147,6 +147,27 @@
   // Define a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
   // ---------------------
 
+  // Builds a frequency listing of the characters in a string
+  // word is string
+  // returns an object
+  function charFreq(word) {
+    const wordArray = [...word];
+    let charArray = [];
+    for (let i = 0; i < wordArray.length; i++) {
+      if (!charArray.includes(wordArray[i])) {
+        charArray.push(wordArray[i]);
+      }
+    }
+    let obj = {};
+    for (let i = 0; i < charArray.length; i++) {
+      obj[charArray[i]] = 0;
+    }
+    for (let i = 0; i < wordArray.length; i++) {
+      obj[wordArray[i]] += 1;
+    }
+    return obj;
+  }
+
   ////////////////////////////////////////////////////////////////////////
   /////////////////////////DO NOT CHANGE CODE BELOW///////////////////////
   ////////////////////////////////////////////////////////////////////////

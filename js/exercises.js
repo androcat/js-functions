@@ -46,6 +46,8 @@
     }
     return false;
   }
+  // OR return 'aeiou'.includes(letter);
+
   // ---------------------
   // Write a function rovarspraket() that will translate a text into "rövarspråket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
   // ---------------------
@@ -68,6 +70,19 @@
     }
     return translatedText;
   }
+  /* OR
+  function rovarspraket(textToTranslate) {
+    textToTranslate = text.split("");
+    for (let i = 0; i < textToTranslate.length; i++) {
+      if (!"aeiou ".includes(textToTranslate[i])) { //space intentional
+        textToTranslate[i] = textToTranslate[i] + "o" + textToTranslate[i];
+      }
+
+      return textToTranslate.join("");
+    }
+  }
+  */
+
   // ---------------------
   // Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.
   // ---------------------
@@ -82,6 +97,13 @@
     }
     return total;
   }
+  /* OR
+  function sum(arr) {
+    return arr.reduce(function(acc, i) {
+      return acc + i;
+    });
+  }
+  */
 
   // Multiplies all the numbers in an array
   // nums is an array of Numbers
@@ -109,6 +131,12 @@
     }
     return reversedText;
   }
+
+  /*
+  function reverse(str) {
+    return str.split("").reverse().join("");
+  }
+  */
   // ---------------------
   // Define a function findLongestWord() that takes an array of words and returns the length of the longest one.
   // ---------------------
@@ -142,6 +170,13 @@
     }
     return longWords;
   }
+  /*
+  function filterLongWords(arr, i) {
+    return arr.filter(fucntion (word) {
+      word.length > i;
+    });
+  }
+  */
 
   // ---------------------
   // Define a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
@@ -167,7 +202,17 @@
     }
     return obj;
   }
+  /*
+  function charFreq(str) {
+    const freqList = {};
 
+    str.split("").forEach(function (char) {
+      freqList[char] = freqList[char] + 1 || 1;
+    });
+
+    return freqList;
+  }
+  */
   ////////////////////////////////////////////////////////////////////////
   /////////////////////////DO NOT CHANGE CODE BELOW///////////////////////
   ////////////////////////////////////////////////////////////////////////
